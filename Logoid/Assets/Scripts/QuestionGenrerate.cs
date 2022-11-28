@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class QuestionGenrerate : MonoBehaviour
 {
     public static string actualAnswer;
-    public Sprite screenQuestionImage;
+    public Sprite screenQuestionImage1;
+    public Sprite screenQuestionImage2;
+    public Sprite screenQuestionImage3;
+    public Sprite screenQuestionImage4;
     public static bool displayingQuestion = false;
     public int questionNumber;
 
@@ -21,7 +24,7 @@ public class QuestionGenrerate : MonoBehaviour
 
             if (questionNumber == 1)
             {
-                QuestionDsiplay.newQuestion = screenQuestionImage;
+                QuestionDsiplay.newQuestion = screenQuestionImage1;
                 QuestionDsiplay.newA = " A. McDonald's";
                 QuestionDsiplay.newB = " B. Burger King";
                 QuestionDsiplay.newC = " C. The IceBerg";
@@ -31,7 +34,7 @@ public class QuestionGenrerate : MonoBehaviour
 
             if (questionNumber == 2)
             {
-                QuestionDsiplay.newQuestion = screenQuestionImage;
+                QuestionDsiplay.newQuestion = screenQuestionImage2;
                 QuestionDsiplay.newA = " A. Gucci";
                 QuestionDsiplay.newB = " B. Dior";
                 QuestionDsiplay.newC = " C. Versace";
@@ -41,7 +44,7 @@ public class QuestionGenrerate : MonoBehaviour
 
             if (questionNumber == 3)
             {
-                QuestionDsiplay.newQuestion = screenQuestionImage;
+                QuestionDsiplay.newQuestion = screenQuestionImage3;
                 QuestionDsiplay.newA = " A. Coffee Day";
                 QuestionDsiplay.newB = " B. StarBucks";
                 QuestionDsiplay.newC = " C. Nescafe";
@@ -51,7 +54,7 @@ public class QuestionGenrerate : MonoBehaviour
 
             if (questionNumber == 4)
             {
-                QuestionDsiplay.newQuestion = screenQuestionImage;
+                QuestionDsiplay.newQuestion = screenQuestionImage4;
                 QuestionDsiplay.newA = " A. Cube";
                 QuestionDsiplay.newB = " B. Hybe";
                 QuestionDsiplay.newC = " C. YG";
@@ -59,6 +62,7 @@ public class QuestionGenrerate : MonoBehaviour
                 actualAnswer = "B";
             }
 
+            QuestionDsiplay.PleaseUpdate = false;
         }
     }
 

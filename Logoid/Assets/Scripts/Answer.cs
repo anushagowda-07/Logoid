@@ -47,11 +47,13 @@ public class Answer : MonoBehaviour
         {
             answerAred.SetActive(true);
             answerABlue.SetActive(false);
+            scoreValue = 0;
         }
         answerA.GetComponent<Button>().enabled = false;
         answerB.GetComponent<Button>().enabled = false;
         answerC.GetComponent<Button>().enabled = false;
         answerD.GetComponent<Button>().enabled = false;
+        StartCoroutine(NextQuestion());
     }
 
     public void AnswerB()
@@ -66,12 +68,14 @@ public class Answer : MonoBehaviour
         {
             answerBred.SetActive(true);
             answerBBlue.SetActive(false);
+            scoreValue = 0;
         }
 
         answerA.GetComponent<Button>().enabled = false;
         answerB.GetComponent<Button>().enabled = false;
         answerC.GetComponent<Button>().enabled = false;
         answerD.GetComponent<Button>().enabled = false;
+        StartCoroutine(NextQuestion());
     }
 
     public void AnswerC()
@@ -86,13 +90,14 @@ public class Answer : MonoBehaviour
         {
             answerCred.SetActive(true);
             answerCBlue.SetActive(false);
-            scoreValue += 5;
+            scoreValue = 0;
         }
 
         answerA.GetComponent<Button>().enabled = false;
         answerB.GetComponent<Button>().enabled = false;
         answerC.GetComponent<Button>().enabled = false;
         answerD.GetComponent<Button>().enabled = false;
+        StartCoroutine(NextQuestion());
     }
 
     public void AnswerD()
@@ -107,13 +112,43 @@ public class Answer : MonoBehaviour
         {
             answerDred.SetActive(true);
             answerDBlue.SetActive(false);
+            scoreValue = 0;
         }
 
         answerA.GetComponent<Button>().enabled = false;
         answerB.GetComponent<Button>().enabled = false;
         answerC.GetComponent<Button>().enabled = false;
         answerD.GetComponent<Button>().enabled = false;
+        StartCoroutine(NextQuestion());
     }
 
-  
+    IEnumerator NextQuestion()
+    {
+        yield return new WaitForSeconds(2);
+
+        answerAGreen.SetActive(false);
+        answerBGreen.SetActive(false);
+        answerCGreen.SetActive(false);
+        answerDGreen.SetActive(false);
+
+        answerAred.SetActive(false);
+        answerBred.SetActive(false);
+        answerCred.SetActive(false);
+        answerDred.SetActive(false);
+
+        answerABlue.SetActive(true);
+        answerBBlue.SetActive(true);
+        answerCBlue.SetActive(true);
+        answerDBlue.SetActive(true);
+
+        answerA.GetComponent<Button>().enabled = true;
+        answerB.GetComponent<Button>().enabled = true;
+        answerC.GetComponent<Button>().enabled = true;
+        answerD.GetComponent<Button>().enabled = true;
+        QuestionGenrerate.displayingQuestion = false;
+
+
+    }
+
+
 }

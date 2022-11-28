@@ -17,23 +17,24 @@ public class QuestionDsiplay : MonoBehaviour
     public static string newB;
     public static string newC;
     public static string newD;
-
-
-
-
+    public static bool PleaseUpdate = false;
 
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        StartCoroutine(PushTextOnScreen());
+        if (PleaseUpdate == false)
+        {
+            PleaseUpdate = true;
+            StartCoroutine(PushTextOnScreen());
+        }
         
     }
 
     IEnumerator PushTextOnScreen()
     {
         yield return new WaitForSeconds(0.25f);
-        screenQuestion.GetComponent<Image>().sprite = screenQuestionImage;
+        screenQuestion.GetComponent<Image>().sprite = newQuestion;
         answerA.GetComponent<TextMeshProUGUI>().text = newA;
         answerB.GetComponent<TextMeshProUGUI>().text = newB;
         answerC.GetComponent<TextMeshProUGUI>().text = newC;

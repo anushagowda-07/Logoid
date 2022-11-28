@@ -3818,7 +3818,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2de571895feda148b90c32bd7afdeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenQuestionImage: {fileID: 21300000, guid: 813f55ac917a6ca41873515f3f2deb76, type: 3}
+  screenQuestionImage1: {fileID: 21300000, guid: 813f55ac917a6ca41873515f3f2deb76, type: 3}
+  screenQuestionImage2: {fileID: 21300000, guid: 9889cbb058712bc4c8ce755179ae16cc, type: 3}
+  screenQuestionImage3: {fileID: 21300000, guid: 53f358e5a5a0e4e4a8790bd63e233543, type: 3}
+  screenQuestionImage4: {fileID: 21300000, guid: 5a8b7241ab18d074b9fdbf7a6849972d, type: 3}
   questionNumber: 0
 --- !u!114 &1963900968
 MonoBehaviour:
