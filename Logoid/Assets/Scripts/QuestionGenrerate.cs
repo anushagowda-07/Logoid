@@ -8,18 +8,57 @@ public class QuestionGenrerate : MonoBehaviour
     public static string actualAnswer;
     public Sprite screenQuestionImage;
     public static bool displayingQuestion = false;
+    public int questionNumber;
+
+
     // Start is called before the first frame update
     void Update()
     {
         if (displayingQuestion == false)
         {
             displayingQuestion = true;
-            QuestionDsiplay.newQuestion = screenQuestionImage;
-            QuestionDsiplay.newA = " A. BurgerKing";
-            QuestionDsiplay.newB = " B. McDonald's";
-            QuestionDsiplay.newC = " C. The IceBerg";
-            QuestionDsiplay.newD = " D. Burger N Bites's";
-            actualAnswer = "B";
+            questionNumber = Random.Range(1, 5);
+
+            if (questionNumber == 1)
+            {
+                QuestionDsiplay.newQuestion = screenQuestionImage;
+                QuestionDsiplay.newA = " A. McDonald's";
+                QuestionDsiplay.newB = " B. Burger King";
+                QuestionDsiplay.newC = " C. The IceBerg";
+                QuestionDsiplay.newD = " D. Burger N Bites's";
+                actualAnswer = "A";
+            }
+
+            if (questionNumber == 2)
+            {
+                QuestionDsiplay.newQuestion = screenQuestionImage;
+                QuestionDsiplay.newA = " A. Gucci";
+                QuestionDsiplay.newB = " B. Dior";
+                QuestionDsiplay.newC = " C. Versace";
+                QuestionDsiplay.newD = " D. Victoria";
+                actualAnswer = "C";
+            }
+
+            if (questionNumber == 3)
+            {
+                QuestionDsiplay.newQuestion = screenQuestionImage;
+                QuestionDsiplay.newA = " A. Coffee Day";
+                QuestionDsiplay.newB = " B. StarBucks";
+                QuestionDsiplay.newC = " C. Nescafe";
+                QuestionDsiplay.newD = " D. Sleepy Owl";
+                actualAnswer = "D";
+            }
+
+            if (questionNumber == 4)
+            {
+                QuestionDsiplay.newQuestion = screenQuestionImage;
+                QuestionDsiplay.newA = " A. Cube";
+                QuestionDsiplay.newB = " B. Hybe";
+                QuestionDsiplay.newC = " C. YG";
+                QuestionDsiplay.newD = " D. JYP";
+                actualAnswer = "B";
+            }
+
         }
     }
 
