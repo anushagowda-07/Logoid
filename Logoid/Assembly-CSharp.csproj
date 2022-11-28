@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\DisplayText.cs" />
+    <Compile Include="Assets\Scripts\QuestionDsiplay.cs" />
+    <Compile Include="Assets\Scripts\QuestionGenrerate.cs" />
+    <Compile Include="Assets\Scripts\Answer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
